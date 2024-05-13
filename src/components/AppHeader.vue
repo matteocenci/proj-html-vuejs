@@ -20,7 +20,17 @@ export default {
 </script>
 
 <template>
-    <h1>Hello</h1>
+    
+    <header>
+        <ul>
+            <li v-for="item in menu">
+                <router-link :to="{name: item.routeName}">
+                    {{ item.title }}
+                </router-link>
+
+            </li>
+        </ul>
+    </header>
 
 </template>
 
