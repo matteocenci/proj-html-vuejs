@@ -2,7 +2,16 @@
 export default {
     data () {
         return {
-            menu: []
+            menu: [
+                {
+                    title: "Home",
+                    routeName: "home",
+                },
+                {
+                    title: "About",
+                    routeName: "about",
+                }
+            ]
         }
 
     }
