@@ -1,5 +1,8 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+
+
 
 </script>
 
@@ -7,6 +10,7 @@ import AppHeader from './components/AppHeader.vue';
   <Home/>
   
   <AppHeader />
+  <AppMain />
   <router-link :to="{name: 'home'}">home</router-link>
   <router-link :to="{name: 'about'}">about</router-link>
   <router-link :to="{name: 'contacts'}">contacts</router-link>
