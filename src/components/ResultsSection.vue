@@ -8,14 +8,14 @@ export default {
             hover: false
         }
     },
-    created: {
+    methods: {
         count(num) {
 
             let i = 0;
-            if (hover && i < num) {
+            if (this.hover && i < num) {
                 return setInterval(() => {
                     i++;
-                }, 500);
+                }, 100);
             }
         }
     }
@@ -25,7 +25,7 @@ export default {
 
 <template>
 
-    <section @mouseover="this.hover === true">
+    <section @mouseover="hover = true">
         <div>
             <h6>WHAT ARE WE DOING</h6>
             <h3>Results in Numbers</h3>
@@ -33,19 +33,19 @@ export default {
         </div>
         <ul>
             <li>
-                <span>{{ count(results.certifications) }}</span>
+                <span class="primary-color">{{ this.i < results.certifications ? count() : results.certifications }}</span>
                 <span>Certifications</span>
             </li>
             <li>
-                <span>{{ count(results.employees) }}</span>
+                <span class="primary-color">{{ this.i < results.employees ? count() : results.employees}}</span>
                 <span>Employees</span>
             </li>
             <li>
-                <span>{{ count(results.customers) }}</span>
+                <span class="primary-color">{{ this.i < results.customers ? count() : results.customers}}</span>
                 <span>Customers</span>
             </li>
             <li>
-                <span>{{ count(results.countries) }}</span>
+                <span class="primary-color">{{ this.i < results.countries ? count() : results.countries }}</span>
                 <span>Countries Served</span>
             </li>
 
@@ -60,12 +60,47 @@ export default {
 @use '../style/partials/mixins' as *;
 @use '../style/partials/variables' as *;
 
-h6 {
-    color: $primary-color;
-}
-
 section {
+    padding: 40px 0;
     width: 100%;
     @include flex(column, space-evenly, center);
+    background-color: black;
+
+    h6 {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: white;
+        margin-bottom: 50px;
+    }
+
+    ul {
+        @include flex(row, space-evenly, center);
+        width: 100%;
+        margin-bottom: 50px;
+
+        li {
+            width: calc(100% / 4);
+            @include flex(column, space-evenly, center);
+            color: white;
+
+            .primary-color {
+                color: $primary-color;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+    }
 }
 </style>
