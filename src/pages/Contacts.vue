@@ -42,10 +42,10 @@ export default {
 
     </section>
     <!-- /business section -->
-    <div class="container">
-        <AppBusiness :store="store.contacts" />
+    
+        <AppBusiness :contact="store.contacts" />
         <AppFormVue />
-    </div>
+
 </template>
 
 <style scoped lang="scss">

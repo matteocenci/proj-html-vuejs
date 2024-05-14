@@ -1,8 +1,6 @@
 <script>
 export default {
-    props: {
-        store: Array
-    }
+
 }
 </script>
 
@@ -14,7 +12,13 @@ export default {
                 <h2 class="fw-bold fs-1 text-light">Our Business Units</h2>
                 <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="col"></div>
+            <div class="col">
+                <ul>
+                    <li>
+                        <AppContact />
+                    </li>
+                </ul>
+            </div>
             <div class="col"></div>
         </div>
     </section>
