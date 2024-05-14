@@ -25,8 +25,8 @@ export default {
     
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+            <div class="container-fluid px-5">
+                <a class="navbar-brand" href="#"><router-link :to="{name: 'home'}"><img src="https://nexgen.codings.dev/wp-content/uploads/2021/03/logo.svg" alt=""></router-link></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -65,6 +65,10 @@ export default {
     a {
         color: #bec1ce;
         text-decoration: none;
+        img {
+            width: 50%;
+        
+        }
         &:hover {
             color: #058283;
         }
