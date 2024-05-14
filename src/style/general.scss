@@ -1,2 +1,19 @@
+@use '../style/partials/variables' as *;
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "bootstrap/scss/bootstrap";
+
+.btn-prymary-color {
+    color: white;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background-color: $primary-color;
+}
+
+.btn-secondary-color {
+    color: white;
+    border: 1px solid $primary-color;
+    padding: 10px 16px;
+    border-radius: 20px;
+    background-color: transparent;
+}
