@@ -1,6 +1,15 @@
 <script>
 import { store } from '../store.js';
+import HeroSection from '../components/HeroSection.vue';
+import PlaneSection from '../components/PlaneSection.vue';
+import ServicesSection from '../components/ServicesSection.vue';
+
 export default {
+    components: {
+        HeroSection,
+        PlaneSection,
+        ServicesSection
+    },
     data() {
         return {
             store
@@ -10,261 +19,13 @@ export default {
 </script>
 
 <template>
-    <section class="hero">
-        <div class="ms-container contacts">
-            <h6>LOGISTIC SERVICES</h6>
-            <h2>CARGO
-                <hr> TRANSPORT
-            </h2>
-            <p>Fractional or exclusive road cargo transportation to all regions,
-                <hr> with small, medium and large vehicles.
-            </p>
-            <div class="container-btn">
-                <button class="btn-prymary-color">GET IN TOUCH</button>
-                <button class="btn-secondary-color">READ MORE</button>
-            </div>
-        </div>
-    </section>
-    <section class="container who-we-are">
-        <div class="info">
-            <h6>WHO WE ARE</h6>
-            <h3>Excellence in Transport</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum velit tortor, interdum sed cursus eu,
-                sagittis ut nunc. Sed vitae tellus et arcu aliquet faucibus fermentum non lacus.</p>
-            <p>Praesent fringilla quis massa et placerat. Mauris eu dui eget urna pellentesque gravida vitae quis nibh.
-                Ut at augue tortor. Pellentesque quis suscipit magna.</p>
-            <p class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam tortor, ultrices accumsan
-                mauris eget,
-                pulvinar tincidunt erat. Sed nisi nisi, rutrum sit amet elit</p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipiscing elit</li>
-                <li>Integer molestie lorem at massa</li>
-                <li>Facilisis in pretium nisl aliquet</li>
-            </ul>
-        </div>
-        <div class="card">
-            <div class="top-card">
-                <i class="fa-solid fa-dolly"></i>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div class="main-card">
-                <h4>Basic Plan</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <h3>$ <span class="price">490</span>/ mo</h3>
-            </div>
-            <div class="bottom-card">
-                <ul>
-                    <li>Fractional Load <i class="fa-solid fa-check"></i></li>
-                    <li>Refrigerated Cargo <i class="fa-solid fa-check"></i></li>
-                    <li>Regional Delivery <i class="fa-solid fa-check"></i></li>
-                    <li>Hazardous Cargo <i class="fa-solid fa-xmark"></i></li>
-                    <li>Mobile Tracking <i class="fa-solid fa-xmark"></i></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="services">
-        <div class="ms-container">
-            <h6>ROAD TRANSPORT</h6>
-            <h3>Main Services</h3>
-            <div class="more">
-                <p>With all of this expertise and capability comes an unrivalled commitment to customer service. We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
-                <button class="btn-secondary-color">SEE ALL</button>
-            </div>
-            <div class="container-card">
-                <div v-for="info in store.main_services" class="services-card">
-                    <div>
-                        <span>
-                            <i :class="info.icon"></i>
-                        </span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <h4>{{ info.title }}</h4>
-                    <p>{{ info.description }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <HeroSection />
+    <PlaneSection />
+    <ServicesSection :store="store.main_services"/>
+
 </template>
 
 <style scoped lang="scss">
-@use '../style/partials/mixins' as *;
-@use '../style/partials/variables' as *;
 
-h6 {
-    color: $primary-color;
-}
-
-hr {
-    border: 0;
-    margin: 0;
-}
-
-section {
-    width: 100%;
-}
-
-.ms-container {
-    width: 80%;
-    margin: auto;
-}
-
-.hero {
-    background-image: url(../assets/img/bg-9.jpg);
-
-    .contacts {
-        @include flex(column, center, flex-start);
-        height: 100vh;
-
-        h2 {
-            color: white;
-            font-weight: bold;
-            font-size: 4rem;
-        }
-
-        p {
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .container-btn {
-            @include flex(row, flex-start, center);
-
-            button {
-                margin-right: 15px;
-            }
-        }
-    }
-}
-
-.who-we-are {
-    width: 80%;
-    padding: 40px 0;
-    display: flex;
-    gap: 40px;
-
-    .info {
-        width: 60%;
-
-        h3 {
-            font-weight: bold;
-            font-size: 3rem;
-        }
-
-        .item {
-            border-left: 3px solid black;
-            padding: 20px;
-        }
-    }
-
-    .card {
-        width: calc(40% - 60px);
-        padding: 20px;
-        background-color: #ededed;
-        border: 0;
-        border-radius: 20px;
-
-        .top-card {
-            @include flex(row, space-between, flex-start);
-
-            i {
-                font-size: 2rem;
-                color: $primary-color;
-            }
-        }
-
-        .main-card {
-            margin-top: 30px;
-
-            h4 {
-                font-size: 2rem;
-            }
-
-            h3 {
-                color: $primary-color;
-                font-size: 3rem;
-                font-weight: lighter;
-
-                span {
-                    font-weight: bold;
-                }
-            }
-        }
-
-        .bottom-card {
-
-            ul {
-                padding: 0;
-
-                li {
-                    list-style-type: none;
-                    @include flex(row, space-between, space-between);
-                    margin-top: 15px;
-
-                    i {
-                        color: $primary-color;
-                        font-size: 1.4rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.services {
-    background-color: black;
-    padding: 40px 0;
-
-    h3 {
-        font-weight: bold;
-        font-size: 3rem;
-        color: white;
-    }
-
-    .more {
-        @include flex(row, space-between, center);
-        gap: 30px;
-
-        p {
-            color: white;
-            width: 70%;
-        }
-
-        button {
-            width: 10%;
-        }
-    }
-
-    .container-card {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        .services-card {
-            border-radius: 20px;
-            width: calc(100% / 3 - 40px);
-            height: 200px;
-            color: white;
-            background-color: #242429;
-            padding: 20px;
-    
-            div {
-                @include flex(row, space-between, center);
-                margin-bottom: 10px;
-
-                span {
-                    background-color: #1e2f35;
-                    padding: 10px;
-                    border-radius: 50%;
-                    aspect-ratio: 1;
-                }
-
-                i {
-                    color: $primary-color;
-                }
-            }
-        }
-    }
-
-}
 </style>
