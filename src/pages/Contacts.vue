@@ -9,9 +9,12 @@ export default {
 
 <template>
     <!-- contact-us section -->
-    <section class="ms_contact d-flex justify-content-center">
-        <h1 class="align-content-center">Contact Us</h1>
+    <section class="ms_contact text-center fs-5">
+           <h1>Contact Us</h1> 
+           <router-link :to="{name: 'home'}" class="ms_home text-light">Home</router-link>
+           <a href=""> / Contact Us</a>          
     </section>
+    
 <AppFormVue />
 </template>
 
@@ -21,14 +24,20 @@ export default {
 
 .ms_contact {
     background-image: url(../assets/img/bg-1.jpg);
-    height: 350px;
     background-position: center;
     background-size: cover;
+    padding: 100px;
 
     h1 {
         color: white;
         font-weight: 900;
         font-size: 4rem;
     }
+
+    .ms_home, a {
+        text-decoration: none;
+        color: $primary-color;
+    }
+
 }
 </style>
