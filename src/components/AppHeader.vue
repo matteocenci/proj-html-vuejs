@@ -79,7 +79,7 @@ export default {
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><router-link :to="{name: 'home'}">Home</router-link></a>
+                            <a class="nav-link" aria-current="page" href="#"><router-link :to="{name: 'home'}">Home</router-link></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><router-link :to="{name: 'about'}">About</router-link></a>
@@ -92,9 +92,9 @@ export default {
                                 Links
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'home'}">Home</router-link></a></li>
-                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'about'}">About</router-link></a></li>
-                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'contacts'}">Contact Us</router-link></a></li>
+                                <li><a class="dropdown-item nav-link" href="#"><router-link :to="{name: 'home'}">Home</router-link></a></li>
+                                <li><a class="dropdown-item nav-link" href="#"><router-link :to="{name: 'about'}">About</router-link></a></li>
+                                <li><a class="dropdown-item nav-link" href="#"><router-link :to="{name: 'contacts'}">Contact Us</router-link></a></li>
                             </ul>
                         </li>
                         
@@ -110,7 +110,7 @@ export default {
                         </li>
                         <span class="cart-counter">0</span>
                         <li class="nav-item">
-                            <a href="#" target="_blank" class="btn btn-outline-light">BUY NEXGEN</a>
+                            <a href="#" target="_blank" class="btn btn-outline-secondary">BUY NEXGEN</a>
                         </li>
                         
                     </ul>
