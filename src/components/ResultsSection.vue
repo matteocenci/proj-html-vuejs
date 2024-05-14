@@ -25,33 +25,33 @@ export default {
 
 <template>
 
-<div class="my-container" @mouseover="this.hover === true">
-    <div>
-        <h6>WHAT ARE WE DOING</h6>
-        <h3>Results in Numbers</h3>
-        <p>Our goal is to exceed expectations by delivering the best job possible.</p>
-    </div>
-    <ul>
-        <li>
-            <span>{{ count(results.certifications) }}</span>
-            <span>Certifications</span>
-        </li>
-        <li>
-            <span>{{ count(results.employees) }}</span>
-            <span>Employees</span>
-        </li>
-        <li>
-            <span>{{ count(results.customers) }}</span>
-            <span>Customers</span>
-        </li>
-        <li>
-            <span>{{ count(results.countries) }}</span>
-            <span>Countries Served</span>
-        </li>
-        
-    </ul>
+    <section @mouseover="this.hover === true">
+        <div>
+            <h6>WHAT ARE WE DOING</h6>
+            <h3>Results in Numbers</h3>
+            <p>Our goal is to exceed expectations by delivering the best job possible.</p>
+        </div>
+        <ul>
+            <li>
+                <span>{{ count(results.certifications) }}</span>
+                <span>Certifications</span>
+            </li>
+            <li>
+                <span>{{ count(results.employees) }}</span>
+                <span>Employees</span>
+            </li>
+            <li>
+                <span>{{ count(results.customers) }}</span>
+                <span>Customers</span>
+            </li>
+            <li>
+                <span>{{ count(results.countries) }}</span>
+                <span>Countries Served</span>
+            </li>
 
-</div>
+        </ul>
+
+    </section>
 
 </template>
 
