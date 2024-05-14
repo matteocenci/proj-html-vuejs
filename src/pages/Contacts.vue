@@ -1,21 +1,44 @@
 <script>
-import AppFormVue from "../components/AppForm.vue"
+import AppFormVue from "../components/AppForm.vue";
+import { store } from '../store';
 export default {
     components: {
         AppFormVue
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
 
 <template>
     <!-- contact-us section -->
-    <section class="ms_contact text-center fs-5">
-           <h1>Contact Us</h1> 
-           <router-link :to="{name: 'home'}" class="ms_home text-light">Home</router-link>
-           <a href=""> / Contact Us</a>          
+    <section class="ms_contact text-center fs-6">
+        <h1 class="pb-4">Contact Us</h1>
+        <router-link :to="{ name: 'home' }" class="ms_home text-light">Home</router-link>
+        <a href=""> / Contact Us</a>
     </section>
-    
-<AppFormVue />
+    <!-- /contact-us section -->
+    <!-- newsletter section -->
+    <section class="ms_newsletter container d-flex">
+        <div class="p-5">
+            <p class="ms_send">NEWSLETTER</p>
+            <h3 class="fs-1 fw-bold">Know First</h3>
+            <p class="ms_respond">Follow closely and receive content about our company <br>and the news of the current
+                market</p>
+        </div>
+        <div class="flex-grow-1 p-5">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+            <button class="btn-prymary-color mt-3">SUBSCRIBE</button>
+        </div>
+    </section>
+    <!-- /newsletter section -->
+    <AppFormVue />
 </template>
 
 <style scoped lang="scss">
@@ -34,10 +57,27 @@ export default {
         font-size: 4rem;
     }
 
-    .ms_home, a {
+    .ms_home,
+    a {
         text-decoration: none;
         color: $primary-color;
     }
+}
 
+.ms_newsletter {
+    input {
+        border-radius: 3px;
+        padding: 13px;
+        background-color: $bg-form;
+        color: $form-text;
+    }
+
+    .ms_send {
+        color: $primary-color;
+    }
+
+    .ms_respond {
+        color: $form-text;
+    }
 }
 </style>
