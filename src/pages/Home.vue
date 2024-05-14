@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+import { store } from '../store.js';
 export default {
     data() {
         return {
@@ -72,7 +72,18 @@ export default {
                 <p>With all of this expertise and capability comes an unrivalled commitment to customer service. We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
                 <button class="btn-secondary-color">SEE ALL</button>
             </div>
-
+            <div class="container-card">
+                <div v-for="info in store.main_services" class="services-card">
+                    <div>
+                        <span>
+                            <i :class="info.icon"></i>
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <h4>{{ info.title }}</h4>
+                    <p>{{ info.description }}</p>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -224,5 +235,36 @@ section {
             width: 10%;
         }
     }
+
+    .container-card {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .services-card {
+            border-radius: 20px;
+            width: calc(100% / 3 - 40px);
+            height: 200px;
+            color: white;
+            background-color: #242429;
+            padding: 20px;
+    
+            div {
+                @include flex(row, space-between, center);
+                margin-bottom: 10px;
+
+                span {
+                    background-color: #1e2f35;
+                    padding: 10px;
+                    border-radius: 50%;
+                    aspect-ratio: 1;
+                }
+
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
 }
 </style>
