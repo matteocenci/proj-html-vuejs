@@ -89,14 +89,30 @@ export default {
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
+                                Links
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'home'}">Home</router-link></a></li>
+                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'about'}">About</router-link></a></li>
+                                <li><a class="dropdown-item" href="#"><router-link :to="{name: 'contacts'}">Contact Us</router-link></a></li>
                             </ul>
                         </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#cart">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </a>
+                        </li>
+                        <span class="cart-counter">0</span>
+                        <li class="nav-item">
+                            <a href="#" target="_blank" class="btn btn-outline-light">BUY NEXGEN</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -111,6 +127,7 @@ export default {
         width: 100%;
         a {
             color: #606d75;
+            font-weight: 400;
         }
     }
     
@@ -119,6 +136,7 @@ export default {
     a {
         color: #bec1ce;
         text-decoration: none;
+        font-weight: 750;
         img {
             width: 50%;
         
@@ -126,7 +144,22 @@ export default {
         &:hover {
             color: #058283;
         }
+        .btn {
+            color: #fff;
+        }
     }
+
 }
 
+.cart-counter {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 100%;
+    background-color: #d90a2c;
+    color: #fff;
+    transform: translate(-7.5px);
+}
 </style>
