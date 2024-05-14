@@ -1,9 +1,12 @@
 <script>
+import AppBusiness from "../components/AppBusiness.vue";
 import AppFormVue from "../components/AppForm.vue";
+import AppSubscribe from "../components/AppSubscribe.vue";
 import { store } from '../store';
 export default {
     components: {
-        AppFormVue
+        AppFormVue, AppSubscribe,
+        AppBusiness
     },
     data() {
         return {
@@ -23,18 +26,14 @@ export default {
     <!-- /contact-us section -->
     <!-- newsletter section -->
     <section class="ms_newsletter container d-flex mb-3 mt-3">
-        <div class="p-5">
+        <div class="p-5 ps-0">
             <p class="ms_send">NEWSLETTER</p>
             <h3 class="fs-1 fw-bold">Know First</h3>
             <p class="ms_respond">Follow closely and receive content about our company <br>and the news of the current
                 market</p>
         </div>
-        <div class="flex-grow-1 p-5">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-            <button class="btn-prymary-color mt-3">SUBSCRIBE</button>
+        <div class="flex-grow-1 p-5 pe-0">
+            <AppSubscribe />
         </div>
     </section>
     <!-- /newsletter section -->
@@ -44,8 +43,9 @@ export default {
     </section>
     <!-- /business section -->
     <div class="container">
-       <AppFormVue /> 
-    </div>  
+        <AppBusiness :store="store.contacts" />
+        <AppFormVue />
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -57,6 +57,7 @@ export default {
     background-position: center;
     background-size: cover;
     padding: 100px;
+    position: relative;
 
     h1 {
         color: white;
@@ -71,13 +72,17 @@ export default {
     }
 }
 
+.ms_contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .ms_newsletter {
-    input {
-        border-radius: 3px;
-        padding: 13px;
-        background-color: $bg-form;
-        color: $form-text;
-    }
     .ms_send {
         color: $primary-color;
     }
@@ -85,10 +90,5 @@ export default {
     .ms_respond {
         color: $form-text;
     }
-}
-
-.business-section {
-    background-color: #111117;
-    height: 350px;
 }
 </style>

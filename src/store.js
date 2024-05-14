@@ -14,7 +14,7 @@ export const store = reactive ({
         certifications: 128,
         employees: 230,
         customers: 517,
-        countriesServed: 94
+        countries: 94
     },
 
     main_services: [
