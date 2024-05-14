@@ -60,4 +60,15 @@ export default {
 
 
 <style scoped lang="scss">
+.navbar {
+    background-image: linear-gradient(-45deg, #1b4965 0%, #0d1b2a 100%);
+    a {
+        color: #bec1ce;
+        text-decoration: none;
+        &:hover {
+            color: #058283;
+        }
+    }
+}
+
 </style>
