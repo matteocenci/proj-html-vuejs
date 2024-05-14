@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div class="container p-0">
+    <div class="container">
         <p class="ms_send">SEND A MESSAGE</p>
         <h2 class="fw-bold fs-1">Get in Touch</h2>
         <p class="ms_respond">We will respond to your message as soon as possible</p>
