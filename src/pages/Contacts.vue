@@ -22,7 +22,7 @@ export default {
     </section>
     <!-- /contact-us section -->
     <!-- newsletter section -->
-    <section class="ms_newsletter container d-flex">
+    <section class="ms_newsletter container d-flex mb-3 mt-3">
         <div class="p-5">
             <p class="ms_send">NEWSLETTER</p>
             <h3 class="fs-1 fw-bold">Know First</h3>
@@ -38,7 +38,14 @@ export default {
         </div>
     </section>
     <!-- /newsletter section -->
-    <AppFormVue />
+    <!-- business section -->
+    <section class="business-section">
+
+    </section>
+    <!-- /business section -->
+    <div class="container">
+       <AppFormVue /> 
+    </div>  
 </template>
 
 <style scoped lang="scss">
@@ -71,7 +78,6 @@ export default {
         background-color: $bg-form;
         color: $form-text;
     }
-
     .ms_send {
         color: $primary-color;
     }
@@ -79,5 +85,10 @@ export default {
     .ms_respond {
         color: $form-text;
     }
+}
+
+.business-section {
+    background-color: #111117;
+    height: 350px;
 }
 </style>
