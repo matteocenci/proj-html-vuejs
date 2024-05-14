@@ -43,7 +43,7 @@ export default {
     </section>
     <!-- /business section -->
     
-        <AppBusiness :contact="store.contacts" />
+        <AppBusiness :contacts="store.contacts" />
         <AppFormVue />
 
 </template>
