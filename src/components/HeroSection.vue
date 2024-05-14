@@ -47,10 +47,11 @@ section {
 
 .hero {
     background-image: url(../assets/img/bg-9.jpg);
+    background-position: center;
 
     .contacts {
         @include flex(column, center, flex-start);
-        height: 100vh;
+        height: calc(100vh - 134px);
 
         h2 {
             color: white;
