@@ -1,9 +1,10 @@
 <script>
 import AppFormVue from "../components/AppForm.vue";
+import AppSubscribe from "../components/AppSubscribe.vue";
 import { store } from '../store';
 export default {
     components: {
-        AppFormVue
+        AppFormVue, AppSubscribe
     },
     data() {
         return {
@@ -30,11 +31,7 @@ export default {
                 market</p>
         </div>
         <div class="flex-grow-1 p-5">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-            <button class="btn-prymary-color mt-3">SUBSCRIBE</button>
+            <AppSubscribe />
         </div>
     </section>
     <!-- /newsletter section -->
@@ -57,7 +54,7 @@ export default {
     background-position: center;
     background-size: cover;
     padding: 100px;
-
+    position: relative;
     h1 {
         color: white;
         font-weight: 900;
@@ -70,14 +67,17 @@ export default {
         color: $primary-color;
     }
 }
+.ms_contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
 
 .ms_newsletter {
-    input {
-        border-radius: 3px;
-        padding: 13px;
-        background-color: $bg-form;
-        color: $form-text;
-    }
     .ms_send {
         color: $primary-color;
     }
@@ -91,4 +91,5 @@ export default {
     background-color: #111117;
     height: 350px;
 }
+
 </style>
