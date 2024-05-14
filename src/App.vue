@@ -17,9 +17,9 @@ export default {
   
   <AppHeader />
   <AppMain />
-  <router-link :to="{name: 'home'}">home</router-link>
-  <router-link :to="{name: 'about'}">about</router-link>
-  <router-link :to="{name: 'contacts'}">contacts</router-link>
+  <!-- <router-link :to="{name: 'home'}">home</router-link> -->
+  <!-- <router-link :to="{name: 'about'}">About</router-link> -->
+  <!-- <router-link :to="{name: 'contacts'}">contacts</router-link> -->
   <router-view></router-view>
   
 </template>
