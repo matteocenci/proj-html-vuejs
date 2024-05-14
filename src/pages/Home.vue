@@ -11,7 +11,7 @@ export default {
 
 <template>
     <section class="hero">
-        <div class="dark container">
+        <div class="ms-container contacts">
             <h6>LOGISTIC SERVICES</h6>
             <h2>CARGO
                 <hr> TRANSPORT
@@ -33,7 +33,8 @@ export default {
                 sagittis ut nunc. Sed vitae tellus et arcu aliquet faucibus fermentum non lacus.</p>
             <p>Praesent fringilla quis massa et placerat. Mauris eu dui eget urna pellentesque gravida vitae quis nibh.
                 Ut at augue tortor. Pellentesque quis suscipit magna.</p>
-            <p class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam tortor, ultrices accumsan mauris eget,
+            <p class="item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam tortor, ultrices accumsan
+                mauris eget,
                 pulvinar tincidunt erat. Sed nisi nisi, rutrum sit amet elit</p>
             <ul>
                 <li>Lorem ipsum dolor sit amet</li>
@@ -50,7 +51,7 @@ export default {
             <div class="main-card">
                 <h4>Basic Plan</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <h3>$  <span class="price">490</span>/ mo</h3>
+                <h3>$ <span class="price">490</span>/ mo</h3>
             </div>
             <div class="bottom-card">
                 <ul>
@@ -63,6 +64,17 @@ export default {
             </div>
         </div>
     </section>
+    <section class="services">
+        <div class="ms-container">
+            <h6>ROAD TRANSPORT</h6>
+            <h3>Main Services</h3>
+            <div class="more">
+                <p>With all of this expertise and capability comes an unrivalled commitment to customer service. We will work hard to understand your needs in order to develop a productive, long-term partnership.</p>
+                <button class="btn-secondary-color">SEE ALL</button>
+            </div>
+
+        </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
@@ -73,20 +85,24 @@ h6 {
     color: $primary-color;
 }
 
+hr {
+    border: 0;
+    margin: 0;
+}
+
 section {
     width: 100%;
+}
+
+.ms-container {
+    width: 80%;
+    margin: auto;
 }
 
 .hero {
     background-image: url(../assets/img/bg-9.jpg);
 
-    hr {
-        border: 0;
-        margin: 0;
-    }
-
-    .dark {
-        width: 100%;
+    .contacts {
         @include flex(column, center, flex-start);
         height: 100vh;
 
@@ -112,9 +128,10 @@ section {
 }
 
 .who-we-are {
-    padding-top: 40px;
+    width: 80%;
+    padding: 40px 0;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
     .info {
         width: 60%;
@@ -131,7 +148,7 @@ section {
     }
 
     .card {
-        width: 40%;
+        width: calc(40% - 60px);
         padding: 20px;
         background-color: #ededed;
         border: 0;
@@ -168,11 +185,12 @@ section {
 
             ul {
                 padding: 0;
+
                 li {
                     list-style-type: none;
                     @include flex(row, space-between, space-between);
                     margin-top: 15px;
-    
+
                     i {
                         color: $primary-color;
                         font-size: 1.4rem;
@@ -183,5 +201,28 @@ section {
     }
 }
 
+.services {
+    background-color: black;
+    padding: 40px 0;
 
+    h3 {
+        font-weight: bold;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .more {
+        @include flex(row, space-between, center);
+        gap: 30px;
+
+        p {
+            color: white;
+            width: 70%;
+        }
+
+        button {
+            width: 10%;
+        }
+    }
+}
 </style>
