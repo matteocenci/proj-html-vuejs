@@ -113,6 +113,8 @@ export default {
             color: #606d75;
         }
     }
+    
+    background-color: transparent;
     background-image: linear-gradient(-45deg, #1b4965 0%, #0d1b2a 100%);
     a {
         color: #bec1ce;
