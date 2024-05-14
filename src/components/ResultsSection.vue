@@ -66,5 +66,6 @@ h6 {
 
 section {
     width: 100%;
+    @include flex(column, space-evenly, center);
 }
 </style>

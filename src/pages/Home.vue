@@ -24,8 +24,8 @@ export default {
 
     <HeroSection />
     <PlaneSection />
-    <ServicesSection :store="store.main_services"/>
-    <ResultsSection :results="store.results"/>
+    <ServicesSection :store="store.main_services" />
+    <ResultsSection :results="store.results" />
 
 
 </template>
