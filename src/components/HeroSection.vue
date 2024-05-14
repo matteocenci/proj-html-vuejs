@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<section class="hero">
+    <section class="hero">
         <div class="ms-container contacts">
             <h6>LOGISTIC SERVICES</h6>
             <h2>CARGO
