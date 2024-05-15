@@ -26,10 +26,29 @@ export default {
                             <i class="fa-solid fa-lock"></i>
                             <label for="#">Security</label>
                         </a>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                     </div>
+                    <div class="col-5 cardt">
+                        <a href="#">
+                            <i class="fa-solid fa-apple-whole"></i>
+                            <label for="#">Certificate</label>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div class="col-5 cardt">
+                        <a href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <label for="#">Expertise</label>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                        
 
                 </div>
 
+            </div>
+            <div class="col-5">
+                
             </div>
         </div>
 
