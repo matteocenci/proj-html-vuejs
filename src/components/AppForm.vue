@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div class="container mb-5">
-        <p class="ms_send">SEND A MESSAGE</p>
+        <p class="ms_send fw-bold">SEND A MESSAGE</p>
         <h2 class="fw-bold fs-1">Get in Touch</h2>
         <p class="ms_respond">We will respond to your message as soon as possible</p>
         <div class="d-flex justify-content-between gap-4">
