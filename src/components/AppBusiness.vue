@@ -1,7 +1,8 @@
 <script>
 export default {
     props: {
-        contacts: Object
+        contacts: Object,
+        flag: Boolean
     }
 }
 </script>
@@ -11,7 +12,7 @@ export default {
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col">
-                    <p class="talk-expert fw-bold">TALT TO AN EXPERT</p>
+                    <p class="talk-expert fw-bold">TALK TO AN EXPERT</p>
                     <h2 class="fw-bold fs-1 text-light">Our <br>Business <br> Units</h2>
                     <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -67,8 +68,10 @@ section {
     width: 100%;
 }
 
+
+
 .business-section {
-    background-color: #111117;
+    background-color: black;
     .talk-expert {
         color: $primary-color;
     }

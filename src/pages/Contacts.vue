@@ -14,7 +14,8 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            flag: false
         }
     }
 }
@@ -22,7 +23,7 @@ export default {
 
 <template>
     <!-- contact-us section -->
-    <AppHero :hero="store.heroSection[1]" class="app-hero"/>
+    <AppHero :hero="store.heroSection[1]" class="app-hero" />
     <!-- /contact-us section -->
     <div class="container">
         <div class="row">
@@ -42,13 +43,13 @@ export default {
 
 
     <!-- business section -->
-    <AppBusiness :contacts="store.contacts" />
+    <AppBusiness :contacts="store.contacts" :flag="flag" />
     <!-- /business section -->
     <!-- form section -->
     <AppFormVue />
     <!-- /form section -->
     <!-- footer -->
-  
+
     <!-- /footer -->
 </template>
 
@@ -59,5 +60,4 @@ export default {
 .app-hero {
     background-image: url(../assets/img/bg-1.jpg);
 }
-
 </style>

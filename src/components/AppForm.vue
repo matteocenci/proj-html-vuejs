@@ -28,7 +28,7 @@ export default {
         </div>
         <div class="mb-3 flex-grow-1">
             <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Message</textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
         </div>
 
         <button class="btn-prymary-color">SEND</button>

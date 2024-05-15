@@ -5,6 +5,8 @@ import PlaneSection from '../components/PlaneSection.vue';
 import ServicesSection from '../components/ServicesSection.vue';
 import ResultsSection from '../components/ResultsSection.vue';
 import CarouselSection from '../components/CarouselSection.vue'
+import AppBusiness from '../components/AppBusiness.vue';
+import AppForm from '../components/AppForm.vue';
 
 export default {
     components: {
@@ -12,11 +14,14 @@ export default {
         PlaneSection,
         ServicesSection,
         ResultsSection,
-        CarouselSection
+        CarouselSection,
+        AppBusiness,
+        AppForm
     },
     data() {
         return {
-            store
+            store,
+            flag: true
         }
     }
 }   
@@ -29,6 +34,8 @@ export default {
     <ServicesSection :store="store.main_services" />
     <ResultsSection :results="store.results" />
     <CarouselSection :card="store.trusted_feedback" />
+    <AppBusiness :contacts="store.contacts" :flag="flag" />
+    <AppForm />
 
 
 </template>
