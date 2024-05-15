@@ -22,7 +22,7 @@ export default {
 
 <template>
     <!-- contact-us section -->
-    <AppHero :hero="store.heroSection[1]" />
+    <AppHero :hero="store.heroSection[1]" class="app-hero"/>
     <!-- /contact-us section -->
     <div class="container">
         <div class="row">
@@ -52,4 +52,9 @@ export default {
 <style scoped lang="scss">
 @use '../style/partials/mixins.scss' as *;
 @use '../style/partials/variables.scss' as *;
+
+.app-hero {
+    background-image: url(../assets/img/bg-1.jpg);
+}
+
 </style>

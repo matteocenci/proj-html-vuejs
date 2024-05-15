@@ -3,7 +3,7 @@ export default {
     props: {
         hero: Object,
     },
-    
+
 }
 </script>
 
@@ -11,7 +11,7 @@ export default {
      <section class="ms_contact text-center fs-6">
         <h1 class="pb-4">{{ hero.h1 }}</h1>
         <router-link :to="{ name: 'home' }" class="ms_home text-light">Home</router-link>
-        <a href="">{{ hero.href }}</a>
+        <a :href="hero.href">{{ hero.href }}</a>
     </section>
 </template>
 
@@ -19,7 +19,6 @@ export default {
 @use '../style/partials/mixins.scss' as *;
 @use '../style/partials/variables.scss' as *;
 .ms_contact {
-    background-image: url(hero.background);
     background-position: center;
     background-size: cover;
     padding: 100px;
@@ -27,7 +26,7 @@ export default {
 
     h1 {
         color: white;
-        opacity: 0.9;
+        opacity: 0.99;
         font-weight: 900;
         font-size: 4rem;
     }
@@ -36,7 +35,7 @@ export default {
     a {
         text-decoration: none;
         color: $primary-color;
-        opacity: 0.9;
+        opacity: 0.99;
     }
 }
 
@@ -49,5 +48,4 @@ export default {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
 }
-
 </style>
