@@ -1,5 +1,6 @@
 <script>
 import AppBusiness from "../components/AppBusiness.vue";
+import AppExample from "../components/AppExample.vue";
 import AppFormVue from "../components/AppForm.vue";
 import AppHero from "../components/AppHero.vue";
 import AppNewsletter from "../components/AppNewsletter.vue";
@@ -7,11 +8,12 @@ import AppSubscribe from "../components/AppSubscribe.vue";
 import { store } from '../store.js';
 export default {
     components: {
-        AppFormVue, AppSubscribe,
-        AppBusiness,
-        AppHero,
-        AppNewsletter
-    },
+    AppFormVue, AppSubscribe,
+    AppBusiness,
+    AppHero,
+    AppNewsletter,
+    AppExample
+},
     data() {
         return {
             store,
@@ -45,12 +47,19 @@ export default {
     <!-- business section -->
     <AppBusiness :contacts="store.contacts" :flag="flag" />
     <!-- /business section -->
-    <!-- form section -->
-    <AppFormVue />
-    <!-- /form section -->
-    <!-- footer -->
-
-    <!-- /footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <!-- form section -->
+                <AppFormVue />
+                <!-- /form section -->
+            </div>
+    
+            <div class="col">
+                <AppExample :contacts="store.contacts"/>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
