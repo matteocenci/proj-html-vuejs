@@ -1,10 +1,12 @@
 <script>
 import WhoWeAre from "../components/WhoWeAre.vue";
+import AppHero from "../components/AppHero.vue";
 
 
     export default {
         components: {
             WhoWeAre,
+            AppHero,
         }
         
 
@@ -12,6 +14,7 @@ import WhoWeAre from "../components/WhoWeAre.vue";
 </script>
 
 <template>
+    <AppHero />
     <WhoWeAre />
 </template>
 

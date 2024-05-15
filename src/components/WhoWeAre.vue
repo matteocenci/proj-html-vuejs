@@ -43,6 +43,7 @@ export default {
 
 <style scoped lang="scss">
 .col-6 {
+    margin-right: 3.5rem;
     h6 {
         color: #18A6A6;
     }
