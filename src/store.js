@@ -82,6 +82,21 @@ export const store = reactive({
             href: ' / Contact Us'
         },
     ],
+
+    cardsArray: [
+        {
+            title: "Company",
+            list: ["Institutional", "Social & Events", "Innovation", "Environment", "Technology"],
+        },
+        {
+            title: "Services",
+            list: ["Audit & Assurance", "Financial Advisory", "Analytics and M&A", "Middle Marketing", "Legal Consulting"],
+        },
+        {
+            title: "Consultants",
+            list: ["David Cooper", "Oliver Jones", "Emma Lopez", "T. Johnson", "Jacob Hill Jr"],
+        },
+    ]
     
 
 });

@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      store
+      store,
     }
   }
 }
@@ -27,7 +27,7 @@ export default {
   <!-- <router-link :to="{name: 'about'}">About</router-link> -->
   <!-- <router-link :to="{name: 'contacts'}">contacts</router-link> -->
   <router-view></router-view>
-  <AppFooter :contacts="store.contacts" />
+    <AppFooter :contacts="store.contacts" :footerCard="store.cardsArray" /> 
 </template>
 
 <style scoped lang="scss"></style>
