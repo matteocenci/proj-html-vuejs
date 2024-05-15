@@ -14,7 +14,7 @@ export default {
             if (this.i < num) {
                 return setInterval(() => {
                     this.i++;
-                }, 100);
+                }, 200);
             } else {
                 return num;
             }
@@ -50,10 +50,13 @@ export default {
 @use '../style/partials/variables' as *;
 
 section {
-    padding: 40px 0;
+    padding: 80px 0;
     width: 100%;
     @include flex(column, space-evenly, center);
-    background-color: black;
+    background-image: url(../assets/img/bg-10.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
 
     h6 {
         color: $primary-color;
