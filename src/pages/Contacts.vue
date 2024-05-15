@@ -47,6 +47,9 @@ export default {
     <!-- form section -->
     <AppFormVue />
     <!-- /form section -->
+    <!-- footer -->
+  
+    <!-- /footer -->
 </template>
 
 <style scoped lang="scss">
