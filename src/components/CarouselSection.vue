@@ -103,19 +103,18 @@ section {
         .prev {
             cursor: pointer;
             font-size: 2rem;
-            width: 5%;
+            width: 10%;
         }
 
         .card-container {
             width: 80%;
-            @include flex(row, space-between, center);
+            @include flex(row, center, center);
             gap: 20px;
             overflow-x: auto;
 
             .card {
-                height: 200px;
-                padding: 10px;
-                width: calc(100% / 3 - 20px);
+                padding: 30px;
+                width: calc(100% / 2 - 20px);
                 position: relative;
                 border-radius: 20px;
                 background-color: #232328;
@@ -128,6 +127,7 @@ section {
 
                 div {
                     background-color: #232328;
+                    padding: 30px;
 
                     p {
                         margin: 0;
@@ -136,8 +136,8 @@ section {
 
                 .position {
                     position: absolute;
-                    right: 10px;
-                    bottom: 10px;
+                    right: 50px;
+                    bottom: 50px;
                 }
             }
         }
@@ -146,7 +146,7 @@ section {
         .next {
             cursor: pointer;
             font-size: 2rem;
-            width: 5%;
+            width: 10%;
         }
 
     }

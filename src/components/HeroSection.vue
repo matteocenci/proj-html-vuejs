@@ -54,6 +54,7 @@ section {
         height: calc(100vh - 134px);
 
         h2 {
+            opacity: 0.9;
             color: white;
             font-weight: bold;
             font-size: 4rem;
