@@ -5,9 +5,30 @@ export default {
     },
     data() {
         return {
-
+            curIndex:0
+        }
+    },
+    methods: {
+        next() {
+            if(this.curIndex === this.card.length - 1) {
+                this.curIndex = 0;
+                console.log('cur0');
+            } else {
+                this.curIndex++;
+                console.log('cur++');
+            }
+        },
+        prev() {
+            if(this.curIndex === 0) {
+                this.curIndex = this.card.length - 1;
+                console.log('car');
+            } else {
+                this.curIndex--;
+                console.log('cur--')
+            }
         }
     }
+
 }
 </script>
 
@@ -19,7 +40,7 @@ export default {
         <p>We work intensively in search of ideals that can add up in the lives of our customers. is what moves us
             and we are grateful for the recognition.</p>
         <div class="carousel">
-            <div class="prev">
+            <div class="prev" @click="prev()">
                 <i class="fa-solid fa-angles-left"></i>
             </div>
             <div class="card-container">
@@ -31,7 +52,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="next">
+            <div class="next" @click="next()">
                 <i class="fa-solid fa-angles-right"></i>
             </div>
         </div>
