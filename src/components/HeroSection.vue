@@ -49,16 +49,6 @@ section {
     background-image: url(../assets/img/bg-9.jpg);
     background-position: center;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
     .contacts {
         @include flex(column, center, flex-start);
         height: calc(100vh - 134px);
