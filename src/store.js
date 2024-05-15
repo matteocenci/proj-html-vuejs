@@ -81,6 +81,7 @@ export const store = reactive({
             background: './assets/img/bg-1.jpg',
             href: ' / Contact Us'
         },
-    ]
+    ],
+    
 
 });

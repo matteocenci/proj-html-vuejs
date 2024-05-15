@@ -1,6 +1,7 @@
 <script>
 import WhoWeAre from "../components/WhoWeAre.vue";
 import AppHero from "../components/AppHero.vue";
+import CompanySection from "../components/CompanySection.vue";
 import {store} from "../store.js";
 
 
@@ -8,6 +9,7 @@ import {store} from "../store.js";
         components: {
             WhoWeAre,
             AppHero,
+            CompanySection,
         },
         data() {
             return {
@@ -22,6 +24,7 @@ import {store} from "../store.js";
 <template>
     <AppHero :hero="store.heroSection[0]" class="app-hero-1"/>
     <WhoWeAre />
+    <CompanySection />
 </template>
 
 <style scoped lang="scss">
