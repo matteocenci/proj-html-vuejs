@@ -24,7 +24,7 @@ export default {
                 console.log('car');
             } else {
                 this.curIndex--;
-                console.log('cur--')
+                console.log('cur--');
             }
         }
     }
@@ -44,7 +44,7 @@ export default {
                 <i class="fa-solid fa-angles-left"></i>
             </div>
             <div class="card-container">
-                <div class="card" v-for="info in card">
+                <div class="card" v-for="(info, index) in card" :class="{none : index !== curIndex}">
                     <h4>{{ info.title }}</h4>
                     <div>
                         <p>{{ info.feedback }}</p>
@@ -64,6 +64,9 @@ export default {
 @use '../style/partials/mixins' as *;
 @use '../style/partials/variables' as *;
 
+.none {
+    display: none;
+}
 
 section {
     background-color: black;
@@ -98,6 +101,7 @@ section {
         }
 
         .prev {
+            cursor: pointer;
             font-size: 2rem;
             width: 5%;
         }
@@ -140,6 +144,7 @@ section {
 
 
         .next {
+            cursor: pointer;
             font-size: 2rem;
             width: 5%;
         }
