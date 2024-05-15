@@ -1,13 +1,15 @@
 <script>
 import AppBusiness from "../components/AppBusiness.vue";
 import AppFormVue from "../components/AppForm.vue";
+import AppHero from "../components/AppHero.vue";
 import AppSubscribe from "../components/AppSubscribe.vue";
 import { store } from '../store';
 export default {
     components: {
-        AppFormVue, AppSubscribe,
-        AppBusiness
-    },
+    AppFormVue, AppSubscribe,
+    AppBusiness,
+    AppHero
+},
     data() {
         return {
             store
@@ -18,11 +20,7 @@ export default {
 
 <template>
     <!-- contact-us section -->
-    <section class="ms_contact text-center fs-6">
-        <h1 class="pb-4">Contact Us</h1>
-        <router-link :to="{ name: 'home' }" class="ms_home text-light">Home</router-link>
-        <a href=""> / Contact Us</a>
-    </section>
+    <AppHero />
     <!-- /contact-us section -->
     <!-- newsletter section -->
     <section class="ms_newsletter container d-flex mb-3 mt-3">
@@ -52,35 +50,6 @@ export default {
 @use '../style/partials/mixins.scss' as *;
 @use '../style/partials/variables.scss' as *;
 
-.ms_contact {
-    background-image: url(../assets/img/bg-1.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 100px;
-    position: relative;
-
-    h1 {
-        color: white;
-        font-weight: 900;
-        font-size: 4rem;
-    }
-
-    .ms_home,
-    a {
-        text-decoration: none;
-        color: $primary-color;
-    }
-}
-
-.ms_contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
 
 .ms_newsletter {
     .ms_send {
