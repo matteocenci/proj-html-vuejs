@@ -24,6 +24,7 @@ export default {
 
     h1 {
         color: white;
+        opacity: 0.9;
         font-weight: 900;
         font-size: 4rem;
     }
@@ -32,6 +33,7 @@ export default {
     a {
         text-decoration: none;
         color: $primary-color;
+        opacity: 0.9;
     }
 }
 
