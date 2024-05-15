@@ -1,14 +1,17 @@
 <script>
 export default {
-
+    props: {
+        hero: Object,
+    },
+    
 }
 </script>
 
 <template>
      <section class="ms_contact text-center fs-6">
-        <h1 class="pb-4">Contact Us</h1>
+        <h1 class="pb-4">{{ hero.h1 }}</h1>
         <router-link :to="{ name: 'home' }" class="ms_home text-light">Home</router-link>
-        <a href=""> / Contact Us</a>
+        <a href="">{{ hero.href }}</a>
     </section>
 </template>
 
@@ -16,7 +19,7 @@ export default {
 @use '../style/partials/mixins.scss' as *;
 @use '../style/partials/variables.scss' as *;
 .ms_contact {
-    background-image: url(../assets/img/bg-1.jpg);
+    background-image: url(hero.background);
     background-position: center;
     background-size: cover;
     padding: 100px;

@@ -11,19 +11,19 @@ export const store = reactive({
     },
 
     results: [
-        {   
+        {
             name: 'Certifications',
             value: 128
         },
-        {   
+        {
             name: 'Employees',
             value: 230
         },
-        {   
+        {
             name: 'Customers',
             value: 517
         },
-        {   
+        {
             name: 'Countries',
             value: 94
         }
@@ -68,6 +68,19 @@ export const store = reactive({
             title: 'Less',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         }
+    ],
+
+    heroSection: [
+        {
+            h1: 'About Us',
+            background: './assets/img/bg-about.jpg',
+            href: ' / About Us'
+        },
+        {
+            h1: 'Contact Us',
+            background: './assets/img/bg-1.jpg',
+            href: ' / Contact Us'
+        },
     ]
 
 });

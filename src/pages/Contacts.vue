@@ -4,7 +4,7 @@ import AppFormVue from "../components/AppForm.vue";
 import AppHero from "../components/AppHero.vue";
 import AppNewsletter from "../components/AppNewsletter.vue";
 import AppSubscribe from "../components/AppSubscribe.vue";
-import { store } from '../store';
+import { store } from '../store.js';
 export default {
     components: {
         AppFormVue, AppSubscribe,
@@ -22,7 +22,7 @@ export default {
 
 <template>
     <!-- contact-us section -->
-    <AppHero />
+    <AppHero :hero="store.heroSection[1]" />
     <!-- /contact-us section -->
     <div class="container">
         <div class="row">
