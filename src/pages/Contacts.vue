@@ -16,8 +16,7 @@ export default {
 },
     data() {
         return {
-            store,
-            flag: false
+            store
         }
     }
 }
@@ -45,7 +44,7 @@ export default {
 
 
     <!-- business section -->
-    <AppBusiness :contacts="store.contacts" :flag="flag" />
+    <AppBusiness :contacts="store.contacts" />
     <!-- /business section -->
     <div class="container">
         <div class="row">

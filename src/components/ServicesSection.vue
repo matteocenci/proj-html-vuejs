@@ -97,6 +97,11 @@ section {
             color: white;
             background-color: #242429;
             padding: 20px;
+
+            &:hover {
+                position: relative;
+                bottom: 10px;
+            }
     
             div {
                 @include flex(row, space-between, center);

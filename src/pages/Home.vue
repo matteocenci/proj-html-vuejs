@@ -20,8 +20,7 @@ export default {
     },
     data() {
         return {
-            store,
-            flag: true
+            store
         }
     }
 }   
@@ -34,7 +33,7 @@ export default {
     <ServicesSection :store="store.main_services" />
     <ResultsSection :results="store.results" />
     <CarouselSection :card="store.trusted_feedback" />
-    <AppBusiness :contacts="store.contacts" :flag="flag" />
+    <AppBusiness :contacts="store.contacts" :bg="'white'" :color="'black'" :bgi="'00a6a6'"/>
     <AppForm />
 
 
