@@ -1,21 +1,33 @@
 import { reactive } from "vue";
 
-export const store = reactive ({
+export const store = reactive({
 
     contacts: {
-            telephoneNumber: '+1 (305) 1234-5678',
-            mainMailAdress: 'hello@example.com',
-            secondaryMailAdress: ' mail@example.com',
-            mainAdress: 'Main Avenue, 987',
-            secondaryAdress:  'Main Avenue, 123'
+        telephoneNumber: '+1 (305) 1234-5678',
+        mainMailAdress: 'hello@example.com',
+        secondaryMailAdress: ' mail@example.com',
+        mainAdress: 'Main Avenue, 987',
+        secondaryAdress: 'Main Avenue, 123'
     },
 
-    results: {
-        certifications: 128,
-        employees: 230,
-        customers: 517,
-        countries: 94
-    },
+    results: [
+        {   
+            name: 'Certifications',
+            value: 128
+        },
+        {   
+            name: 'Employees',
+            value: 230
+        },
+        {   
+            name: 'Customers',
+            value: 517
+        },
+        {   
+            name: 'Countries',
+            value: 94
+        }
+    ],
 
     main_services: [
         {
@@ -37,23 +49,23 @@ export const store = reactive ({
 
     trusted_feedback: [
         {
-            title:'WooCommerce',
+            title: 'WooCommerce',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         },
         {
-            title:'WordPress',
+            title: 'WordPress',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         },
         {
-            title:'Pingdom',
+            title: 'Pingdom',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         },
         {
-            title:'JQuery',
+            title: 'JQuery',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         },
         {
-            title:'Less',
+            title: 'Less',
             feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis diam varius diam ultricies lacinia.'
         }
     ]

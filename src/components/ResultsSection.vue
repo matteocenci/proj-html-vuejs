@@ -1,21 +1,22 @@
 <script>
 export default {
     props: {
-        results: Object
+        results: Array
     },
     data() {
         return {
-            hover: false
+            hover: false,
+            i: 0
         }
     },
     methods: {
         count(num) {
-
-            let i = 0;
-            if (this.hover && i < num) {
+            if (this.i < num) {
                 return setInterval(() => {
-                    i++;
+                    this.i++;
                 }, 100);
+            } else {
+                return num;
             }
         }
     }
@@ -25,28 +26,16 @@ export default {
 
 <template>
 
-    <section @mouseover="hover = true">
+    <section @mouseover="this.hover = true">
         <div>
             <h6>WHAT ARE WE DOING</h6>
             <h3>Results in Numbers</h3>
             <p>Our goal is to exceed expectations by delivering the best job possible.</p>
         </div>
         <ul>
-            <li>
-                <span class="primary-color">{{ this.i < results.certifications ? count() : results.certifications }}</span>
-                <span>Certifications</span>
-            </li>
-            <li>
-                <span class="primary-color">{{ this.i < results.employees ? count() : results.employees}}</span>
-                <span>Employees</span>
-            </li>
-            <li>
-                <span class="primary-color">{{ this.i < results.customers ? count() : results.customers}}</span>
-                <span>Customers</span>
-            </li>
-            <li>
-                <span class="primary-color">{{ this.i < results.countries ? count() : results.countries }}</span>
-                <span>Countries Served</span>
+            <li v-for="item in results">
+                <span class="primary-color">{{ this.hover === true ? count(item.value) : '0' }}</span>
+                <span>{{ item.name }}</span>
             </li>
 
         </ul>
