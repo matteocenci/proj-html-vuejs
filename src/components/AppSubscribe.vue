@@ -5,11 +5,15 @@ export default {
 </script>
 
 <template>
-        <label for="exampleFormControlInput1" class="form-label"></label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-        <label for="exampleFormControlInput1" class="form-label"></label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-        <button class="btn-prymary-color mt-3">SUBSCRIBE</button>
+    <section class="">
+        <div>
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+            <button class="btn-prymary-color mt-3">SUBSCRIBE</button>
+        </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
