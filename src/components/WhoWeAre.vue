@@ -9,7 +9,7 @@ export default {
         <div class="row">
             <div class="col-6">
                 <h6>A SUCCESS STORY</h6>
-                <h1>Who We Are</h1>
+                <h2>Who We Are</h2>
 
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <strong>Architecto explicabo voluptate similique voluptatibus hic perspiciatis eaque aliquid ipsum nostrum minima!</strong> Adipisci enim inventore, id neque eos soluta placeat quod laboriosam.</p>
 
@@ -48,7 +48,7 @@ export default {
         color: #18A6A6;
     }
 
-    h1 {
+    h2 {
         font-weight: 700;
         font-size: 50px;
         margin-top: 30px;
@@ -89,7 +89,7 @@ export default {
     }
 
     .mic {
-        margin-top: 2rem;
+        margin-top: 3.5rem;
         margin-right: 1.5rem;
         i {
             font-size: 30px;
