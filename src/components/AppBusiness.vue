@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <section class="business-section">
+    <section class="business-section mb-5">
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col">
@@ -69,7 +69,6 @@ section {
 
 .business-section {
     background-color: #111117;
-
     .talk-expert {
         color: $primary-color;
     }
