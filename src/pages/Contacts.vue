@@ -5,6 +5,7 @@ import AppFormVue from "../components/AppForm.vue";
 import AppHero from "../components/AppHero.vue";
 import AppNewsletter from "../components/AppNewsletter.vue";
 import AppSubscribe from "../components/AppSubscribe.vue";
+import axios from "axios";
 import { store } from '../store.js';
 export default {
     components: {
