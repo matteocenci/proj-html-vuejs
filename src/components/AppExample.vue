@@ -39,7 +39,8 @@ export default {
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <img src="" alt="">
+            <h3>Maurizio</h3>
+            <img class="ms_rende" src="../assets/img/rende.png" alt="">
         </div>
     </div>
     <!-- /offcanvas -->
@@ -90,5 +91,11 @@ ul {
         background-color: $primary-color;
         color: white
     }
+}
+
+.ms_rende {
+    height: 80vh;
+    max-width: 100%;
+    margin-top: 20px;
 }
 </style>
