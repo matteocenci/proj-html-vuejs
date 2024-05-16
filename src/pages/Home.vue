@@ -5,7 +5,7 @@ import PlaneSection from '../components/PlaneSection.vue';
 import ServicesSection from '../components/ServicesSection.vue';
 import ResultsSection from '../components/ResultsSection.vue';
 import CarouselSection from '../components/CarouselSection.vue'
-import AppBusiness from '../components/AppBusiness.vue';
+import BusinessSection from '../components/BusinessSection.vue';
 import AppForm from '../components/AppForm.vue';
 
 export default {
@@ -15,7 +15,7 @@ export default {
         ServicesSection,
         ResultsSection,
         CarouselSection,
-        AppBusiness,
+        BusinessSection,
         AppForm
     },
     data() {
@@ -33,7 +33,7 @@ export default {
     <ServicesSection :store="store.main_services" />
     <ResultsSection :results="store.results" />
     <CarouselSection :card="store.trusted_feedback" />
-    <AppBusiness :contacts="store.contacts" :bg="'white'" :color="'black'" :bgi="'00a6a6'"/>
+    <BusinessSection :contacts="store.contacts" />
     <AppForm />
 
 

@@ -31,7 +31,7 @@ export default {
                             <span>{{ contacts.mainAdress }}</span>
                         </li>
                     </ul>
-                    <button class="btn-secondary-color"><router-link :to="{ name: 'home' }" class="ms_home text-light">BUY NEXGEN</router-link></button>
+                    <router-link :to="{ name: 'home' }" class="ms_home text-light"><button class="btn-secondary-color">BUY NEXGEN</button></router-link>
                 </div>
                 <div class="card list" v-for="cards in footerCard">
                     <div class="card-body">
@@ -101,7 +101,7 @@ export default {
         .nexgen {
             background-color: #111117;
             color: $form-text;
-
+            
             img {
                 width: 50%;
                 padding-left: 25px;

@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <section class="business-section mb-5" :style="{'background-color' : `${bg}`}">
+    <section class="business-section mb-5">
         <div class="container">
             <div class="row pt-5 pb-5">
                 <div class="col">
@@ -21,18 +21,18 @@ export default {
                 <div class="col">
                     <ul>
                         <li>
-                            <i class="fa-solid fa-phone" :style="{'background-color' : `#${bgi}`}"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.telephoneNumber }}</span>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>{{ contacts.telephoneNumber }}</span>
                         </li>
 
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.secondaryMailAdress }}</span>
+                            <span>{{ contacts.secondaryMailAdress }}</span>
                         </li>
 
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.mainAdress }}</span>
+                            <span>{{ contacts.mainAdress }}</span>
                         </li>
                     </ul>
                     <button class="btn-prymary-color">VIEW MAP</button>
@@ -41,17 +41,17 @@ export default {
                     <ul>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.telephoneNumber }}</span>
+                            <span>{{ contacts.telephoneNumber }}</span>
                         </li>
 
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.secondaryMailAdress }}</span>
+                            <span>{{ contacts.secondaryMailAdress }}</span>
                         </li>
 
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <span :style="{'color': `${color}`}">{{ contacts.mainAdress }}</span>
+                            <span>{{ contacts.mainAdress }}</span>
                         </li>
                     </ul>
                     <button class="btn-prymary-color">VIEW MAP</button>
