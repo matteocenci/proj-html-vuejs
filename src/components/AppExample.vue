@@ -30,7 +30,18 @@ export default {
             <span>{{ contacts.mainAdress }}</span>
         </li>
     </ul>
-    <button class="btn-prymary-color ms-5">VIEW MAP</button>
+    <!-- offcanvas -->
+    <button class="btn btn-primary btn-map ms-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight">VIEW MAP</button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        </div>
+    </div>
+    <!-- /offcanvas -->
 </template>
 
 <style scoped lang="scss">
@@ -41,40 +52,42 @@ p {
     color: $form-text;
 }
 
- ul {
-        list-style-type: none;
+ul {
+    list-style-type: none;
 
-        li {
+    li {
+        padding: 10px;
+
+        i {
+            color: $primary-color;
             padding: 10px;
+            border: 1px solid #E4F1F2;
+            border-radius: 50%;
+            background-color: #E4F1F2;
+            margin-right: 10px;
 
-            i {
-                color: $primary-color;
-                padding: 10px;
-                border: 1px solid #E4F1F2;
-                border-radius: 50%;
-                background-color: #E4F1F2;
-                margin-right: 10px;
-
-                &:hover {
-                    background-color: $primary-color;
-                    color: white;
-                }
-
+            &:hover {
+                background-color: $primary-color;
+                color: white;
             }
 
-            span {
-                color: $primary-color;
-            }
         }
- }
 
- .btn-prymary-color {
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.btn-map {
     background-color: #E4F1F2;
+    border: 1px solid #E4F1F2;
+    border-radius: 20px;
     color: $primary-color;
 
     &:hover {
         background-color: $primary-color;
         color: white
     }
- }
+}
 </style>
