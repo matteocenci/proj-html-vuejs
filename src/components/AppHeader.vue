@@ -99,8 +99,8 @@ export default {
                         </li>
                         
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <i class="fa-solid fa-magnifying-glass" data-bs-toogle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -118,6 +118,20 @@ export default {
             </div>
         </nav>
     </header>
+
+    <!-- OffCanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            
+        </div>
+        <div class="offcanvas-body d-flex justify-content-center">
+            <h2>What are you looking for?</h2>
+            <input type="text" placeholder="Enter Keywords">
+            <button>Search</button>
+            
+        </div>
+    </div>
 </template>
 
 
@@ -149,6 +163,34 @@ export default {
         }
     }
 
+}
+
+.offcanvas-body{
+    h2{
+        font-size: 55px;
+        color: #21333E;
+        font-weight: 700;
+    }
+    input {
+        margin-top: 20px;
+        padding: 10px 10px;
+        border: none;
+        background-color: #ECECEC;
+        border-radius: 10px;
+        
+        
+    }
+    button {
+        width: 35%;
+        margin-top: 25px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 25px;
+        background-color: #058283;
+        color: #FFF;
+        font-size: 24px;
+
+    }
 }
 
 .cart-counter {
