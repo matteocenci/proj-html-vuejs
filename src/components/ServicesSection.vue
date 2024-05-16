@@ -18,7 +18,7 @@ export default {
             <div class="more">
                 <p>With all of this expertise and capability comes an unrivalled commitment to customer service. We will
                     work hard to understand your needs in order to develop a productive, long-term partnership.</p>
-                <button class="btn-secondary-color">SEE ALL</button>
+                <button class="btn-secondary-color"><a href="#home">SEE ALL</a></button>
             </div>
             <div class="container-card">
                 <div v-for="info in store" class="services-card">
@@ -86,6 +86,11 @@ section {
 
             &:hover {
                 background-color: $primary-color;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
             }
         }
     }

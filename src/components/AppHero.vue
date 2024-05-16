@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-     <section class="ms_contact text-center fs-6">
+    <section class="ms_contact text-center fs-6">
         <h1 class="pb-4">{{ hero.h1 }}</h1>
         <router-link :to="{ name: 'home' }" class="ms_home text-light">Home</router-link>
         <a :href="hero.href">{{ hero.href }}</a>
