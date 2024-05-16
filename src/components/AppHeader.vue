@@ -99,12 +99,12 @@ export default {
                         </li>
                         
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <i class="fa-solid fa-magnifying-glass" data-bs-toogle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                            <a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#cart">
+                            <a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
                         </li>
@@ -119,8 +119,8 @@ export default {
         </nav>
     </header>
 
-    <!-- OffCanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <!-- OffCanvas for Search -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
         <div class="offcanvas-header">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             
@@ -129,6 +129,18 @@ export default {
             <h2>What are you looking for?</h2>
             <input type="text" placeholder="Enter Keywords">
             <button>Search</button>
+            
+        </div>
+    </div>
+
+    <!-- Offcanvas for Cart  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            
+        </div>
+        <div class="body-cart d-flex align-items-end justify-content-center">
+            <p>No products in the cart.</p>
             
         </div>
     </div>
@@ -166,6 +178,7 @@ export default {
 }
 
 .offcanvas-body{
+    flex-direction: column;
     h2{
         font-size: 55px;
         color: #21333E;
@@ -190,6 +203,21 @@ export default {
         color: #FFF;
         font-size: 24px;
 
+    }
+}
+
+.body-cart {
+    margin-top: 8.5rem;
+    height: 50vh;
+    background-image: url(https://nexgen.codings.dev/wp-content/uploads/2021/03/empty-cart.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    p{
+        font-size: 24px;
+        font-weight: 600;
+        color: #817F7A;
     }
 }
 
