@@ -4,7 +4,7 @@ import HeroSection from '../components/HeroSection.vue';
 import PlaneSection from '../components/PlaneSection.vue';
 import ServicesSection from '../components/ServicesSection.vue';
 import ResultsSection from '../components/ResultsSection.vue';
-import CarouselSection from '../components/CarouselSection.vue'
+import CarouselSection from '../components/CarouselSection.vue';
 import BusinessSection from '../components/BusinessSection.vue';
 import AppForm from '../components/AppForm.vue';
 import AppExample from '../components/AppExample.vue';
