@@ -83,6 +83,10 @@ section {
 
         button {
             width: 10%;
+
+            &:hover {
+                background-color: $primary-color;
+            }
         }
     }
 
