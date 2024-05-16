@@ -94,7 +94,7 @@ ul {
 }
 
 .ms_rende {
-    height: 80vh;
+    height: vh;
     max-width: 100%;
     margin-top: 20px;
 }
