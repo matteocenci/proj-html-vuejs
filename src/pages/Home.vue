@@ -7,6 +7,7 @@ import ResultsSection from '../components/ResultsSection.vue';
 import CarouselSection from '../components/CarouselSection.vue'
 import BusinessSection from '../components/BusinessSection.vue';
 import AppForm from '../components/AppForm.vue';
+import AppExample from '../components/AppExample.vue';
 
 export default {
     components: {
@@ -16,7 +17,8 @@ export default {
         ResultsSection,
         CarouselSection,
         BusinessSection,
-        AppForm
+        AppForm,
+        AppExample
     },
     data() {
         return {
@@ -34,11 +36,29 @@ export default {
     <ResultsSection :results="store.results" />
     <CarouselSection :card="store.trusted_feedback" />
     <BusinessSection :contacts="store.contacts" />
-    <AppForm />
+    <div class="flex">
+        <div id="appForm">
+            <AppForm />
+        </div>
 
+        <div>
+            <AppExample :contacts="store.contacts"/>
+        </div>
+
+    </div>
 
 </template>
 
 <style scoped lang="scss">
 
+@use '../style/partials/mixins' as *;
+@use '../style/partials/variables' as *;
+
+    .flex {
+        @include flex(row, space-evenly, center);
+
+        #appForm {
+            width: 50%;
+        }
+    }
 </style>

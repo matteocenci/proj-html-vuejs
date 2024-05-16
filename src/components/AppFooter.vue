@@ -77,6 +77,12 @@ export default {
             border-radius: 10px;
             width: 30%;
 
+            &:hover {
+                position: relative;
+                bottom: 10px;
+            }
+    
+
             h2 {
                 color: white;
                 font-size: 1.5rem;
