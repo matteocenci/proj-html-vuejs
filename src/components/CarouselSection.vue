@@ -93,6 +93,7 @@ section {
     }
 
     .carousel {
+        min-height: 500px;
         padding: 20px;
         @include flex(row, space-between, center);
 

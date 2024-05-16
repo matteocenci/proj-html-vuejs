@@ -8,12 +8,12 @@ import AppSubscribe from "../components/AppSubscribe.vue";
 import { store } from '../store.js';
 export default {
     components: {
-    AppFormVue, AppSubscribe,
-    AppBusiness,
-    AppHero,
-    AppNewsletter,
-    AppExample
-},
+        AppFormVue, AppSubscribe,
+        AppBusiness,
+        AppHero,
+        AppNewsletter,
+        AppExample
+    },
     data() {
         return {
             store
@@ -46,16 +46,16 @@ export default {
     <!-- business section -->
     <AppBusiness :contacts="store.contacts" />
     <!-- /business section -->
-    <div class="container">
+    <div class="container bg">
         <div class="row">
             <div class="col-8">
                 <!-- form section -->
                 <AppFormVue />
                 <!-- /form section -->
             </div>
-    
+
             <div class="col">
-                <AppExample :contacts="store.contacts"/>
+                <AppExample :contacts="store.contacts" />
             </div>
         </div>
     </div>
@@ -67,5 +67,12 @@ export default {
 
 .app-hero {
     background-image: url(../assets/img/bg-1.jpg);
+}
+
+.bg {
+    background-image: url("https://nexgen.codings.dev/wp-content/uploads/2021/03/nexgen-background.png");
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
 }
 </style>

@@ -56,6 +56,10 @@ export default {
 
     .flex {
         @include flex(row, space-evenly, center);
+        background-image: url("https://nexgen.codings.dev/wp-content/uploads/2021/03/nexgen-background.png");
+        background-position: center;
+        background-size: contain;
+        background-attachment: fixed;
 
         #appForm {
             width: 50%;
