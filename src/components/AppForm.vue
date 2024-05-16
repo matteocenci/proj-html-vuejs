@@ -1,5 +1,4 @@
 <script>
-import { resolveTransitionHooks } from 'vue'
 
 export default {
     data() {
