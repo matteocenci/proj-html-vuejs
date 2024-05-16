@@ -59,6 +59,7 @@ p {
                     background-color: $primary-color;
                     color: white;
                 }
+
             }
 
             span {
